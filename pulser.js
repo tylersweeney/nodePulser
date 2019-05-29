@@ -14,3 +14,12 @@ Pulser.prototype.start = function() {
         util.log('<<<< pulse');
     }, 1000);
 };
+
+//Instantiate a Pulser object
+var pulser = new Pulser();
+//Handler function
+pulser.on('pulse', () => {
+    util.log('pulse received');
+});
+//Start it pulsing
+pulser.start();
